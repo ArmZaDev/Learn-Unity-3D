@@ -292,8 +292,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.14452505, y: -0.1016314, z: 0.014925227, w: -0.9841549}
-  m_LocalPosition: {x: -2.5729687, y: 4.0584135, z: -8.487389}
+  m_LocalRotation: {x: -0.13225952, y: 0.6934208, z: -0.13178436, w: -0.6959223}
+  m_LocalPosition: {x: 6.2951274, y: 3.982057, z: -0.35562375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 1637428281}
   - component: {fileID: 1637428280}
   - component: {fileID: 1637428279}
+  - component: {fileID: 1637428283}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -395,6 +396,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1637428283
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637428278}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1645142216
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +520,7 @@ GameObject:
   - component: {fileID: 1722470230}
   - component: {fileID: 1722470229}
   - component: {fileID: 1722470228}
+  - component: {fileID: 1722470232}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -587,6 +605,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1722470232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722470227}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1889443405
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +633,7 @@ GameObject:
   - component: {fileID: 1889443408}
   - component: {fileID: 1889443407}
   - component: {fileID: 1889443406}
+  - component: {fileID: 1889443410}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -617,8 +652,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.7389172}
+  m_Center: {x: 0, y: 0, z: -0.3467148}
 --- !u!23 &1889443407
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -676,9 +711,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889443405}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0}
+  m_LocalPosition: {x: 0, y: 3.43, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1889443410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889443405}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
