@@ -7,12 +7,17 @@ public class MyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello World");
+        Debug.Log("Start Running");
+    }
+
+    private void Awake()  //Script Enabled/Disabled 
+    {
+        Debug.Log("Awake Running");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Update Running");
     }
 }
