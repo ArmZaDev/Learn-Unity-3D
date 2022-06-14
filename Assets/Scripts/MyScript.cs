@@ -4,30 +4,37 @@ using UnityEngine;
 
 public class MyScript : MonoBehaviour
 {
+    public float RunSpeed = 10.0f;
+    private Rigidbody myRigidBody;
+    public Vector3 movement;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start Running");
+        myRigidBody = GetComponent<Rigidbody>();
+        
     }
-
-    private void Awake()  //Script Enabled/Disabled 
-    {
-        Debug.Log("Awake Running");
-    }
-
+  
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        Debug.Log("Update Running");
-    }*/
-
-    private void FixedUpdate() //อะไรที่เกี่ยวกับ ฟิชิก, เวลา นำมาเขียนในนี้เลย
-    {
-        Debug.Log("FixedUpdate Running");
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Jump");
+        float z = Input.GetAxisRaw("Vertical");
+        
+        movement = new Vector3(x, y, z);
     }
 
-    private void LateUpdate() //จะทำงานหลัง อัพเดตเสร็จ
+    private void FixedUpdate()
     {
-        Debug.Log("LateUpdate Running");
+        movePlayer(movement);
+           
+    }
+
+    void movePlayer(Vector3 direction)
+    {
+        //myRigidBody.velocity = direction * RunSpeed;
+        //myRigidBody.MovePosition(transform.position + (direction * RunSpeed * Time.deltaTime));
+        myRigidBody.AddForce(direction * RunSpeed);
     }
 }
