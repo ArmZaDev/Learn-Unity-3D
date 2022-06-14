@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PickUpItem : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision target)
+ 
+
+    private void OnTriggerEnter(Collider target)
     {
         if (target.gameObject.tag == "Item") //tag.Equals("Item")
         {
@@ -12,7 +14,6 @@ public class PickUpItem : MonoBehaviour
             Destroy(target.gameObject);
         }
     }
-
 
 
 }
