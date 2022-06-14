@@ -11,9 +11,14 @@ public class PickUpItem : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip itemSource;
 
+    int itemCount = 0;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        itemCount = GameObject.FindGameObjectsWithTag("Item").Length;
+        scoreText.text = "Item = " + score.ToString() + "/" + itemCount.ToString();
     }
 
     private void OnTriggerEnter(Collider target)
@@ -22,8 +27,8 @@ public class PickUpItem : MonoBehaviour
         {
             //Delete Item in Scene game
             Destroy(target.gameObject);
-            score += 10;
-            scoreText.text = "Score X " + score.ToString();
+            score += 1;
+            scoreText.text = "Item = " + score.ToString() + "/" + itemCount.ToString();
 
             audioSource.PlayOneShot(itemSource);
         }
