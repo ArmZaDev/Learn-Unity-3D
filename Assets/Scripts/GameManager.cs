@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField] private GameObject pauseUI;
 
     // Update is called once per frame
     void Update()
@@ -15,11 +15,15 @@ public class GameManager : MonoBehaviour
             {
                 //Pause
                 Time.timeScale = 0;
+
+                pauseUI.SetActive(true);
             }
             else
             {
                 //Continue
                 Time.timeScale = 1; 
+
+                pauseUI.SetActive(false);
             }
         }
     }
