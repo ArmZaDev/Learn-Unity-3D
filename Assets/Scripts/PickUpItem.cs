@@ -9,7 +9,8 @@ public class PickUpItem : MonoBehaviour
     private int score = 0;
     public Text scoreText;
     private AudioSource audioSource;
-    public AudioClip itemSource;
+    public AudioClip itemSound;
+    public AudioClip completeSound;
 
     int itemCount = 0;
 
@@ -30,7 +31,16 @@ public class PickUpItem : MonoBehaviour
             score += 1;
             scoreText.text = "Item = " + score.ToString() + "/" + itemCount.ToString();
 
-            audioSource.PlayOneShot(itemSource);
+            audioSource.PlayOneShot(itemSound);
+
+            if (score >= itemCount)
+            {
+                audioSource.PlayOneShot(completeSound);
+            }
+            else
+            {
+                audioSource.PlayOneShot(itemSound);
+            }
         }
     }
 

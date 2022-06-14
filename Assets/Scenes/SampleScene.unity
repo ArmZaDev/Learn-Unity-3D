@@ -528,7 +528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1883998144}
-  itemSource: {fileID: 8300000, guid: eac3007b548544e40aa240174c02ac94, type: 3}
+  itemSound: {fileID: 8300000, guid: eac3007b548544e40aa240174c02ac94, type: 3}
+  completeSound: {fileID: 8300000, guid: 330c54ffb7840ce409f6531dd8ef9e14, type: 3}
 --- !u!82 &1258710196
 AudioSource:
   m_ObjectHideFlags: 0
