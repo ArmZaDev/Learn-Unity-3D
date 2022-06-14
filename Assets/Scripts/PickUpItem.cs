@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PickUpItem : MonoBehaviour
@@ -36,12 +37,19 @@ public class PickUpItem : MonoBehaviour
             if (score >= itemCount)
             {
                 audioSource.PlayOneShot(completeSound);
+
+                NextLevel();
             }
             else
             {
                 audioSource.PlayOneShot(itemSound);
             }
         }
+    }
+
+    void NextLevel()
+    {
+        SceneManager.LoadScene("Level2");
     }
 
 
