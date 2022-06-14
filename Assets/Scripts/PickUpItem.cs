@@ -38,7 +38,7 @@ public class PickUpItem : MonoBehaviour
             {
                 audioSource.PlayOneShot(completeSound);
 
-                NextLevel();
+                StartCoroutine(NextLevel());
             }
             else
             {
@@ -47,8 +47,9 @@ public class PickUpItem : MonoBehaviour
         }
     }
 
-    void NextLevel()
+    IEnumerator NextLevel()
     {
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Level2");
     }
 
